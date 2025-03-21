@@ -2,9 +2,9 @@
 // Backend Integration + Google Slides Update
 
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Card, CardContent } from "../components/ui/card";
 import axios from 'axios';
 
 export default function SolarProposalApp() {
@@ -18,10 +18,10 @@ export default function SolarProposalApp() {
 
   const [status, setStatus] = useState('');
 
-  const handleChange = e => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleSubmit = async () => {
     setStatus('Calculating proposal...');
     try {
