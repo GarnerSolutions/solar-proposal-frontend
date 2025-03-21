@@ -1,3 +1,5 @@
+"use client";  // 👈 Add this at the top
+
 // Solar Proposal App - React + Tailwind
 // Backend Integration + Google Slides Update
 
